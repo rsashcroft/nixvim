@@ -46,7 +46,7 @@
     #./plug/ui/recognition.nix
     ./plug/ui/telescope.nix
     ./plug/ui/nvim-tree.nix
-    ./plug/rainbow-delimiters.nix
+    ./plug/ui/rainbow-delimiters.nix
     #./plug/utils/harpoon.nix
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
