@@ -33,7 +33,6 @@
 
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
-    ./plug/treesitter/parsers/htmldjango.nix
 
     ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
