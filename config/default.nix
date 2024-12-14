@@ -26,6 +26,7 @@
     ./plug/lsp/lspsaga.nix
     ./plug/lsp/none-ls.nix
     ./plug/lsp/trouble.nix
+    ./plug/lsp/rust-tools.nix
 
     ./plug/snippets/luasnip.nix
 
