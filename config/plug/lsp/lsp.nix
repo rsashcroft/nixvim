@@ -6,6 +6,9 @@
     lsp = {
       enable = true;
       servers = {
+        rust_analyzer = {
+          enable = true;
+        };
         eslint = {
           enable = true;
         };
