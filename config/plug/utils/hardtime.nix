@@ -2,8 +2,8 @@
 {
   plugins.hardtime = {
     enable = lib.mkDefault false;
-    enabled = true;
     settings = {
+      enabled = true;
       disable_mouse = true;
       disabled_filetypes = [ "Oil" ];
       restriction_mode = "hint";
