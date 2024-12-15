@@ -26,7 +26,8 @@
     ./plug/lsp/lspsaga.nix
     ./plug/lsp/none-ls.nix
     ./plug/lsp/trouble.nix
-    ./plug/lsp/rust-tools.nix
+
+    ./plug/lang/rustaceanvim.nix
 
     ./plug/snippets/luasnip.nix
 
@@ -45,6 +46,7 @@
     ./plug/ui/nvim-tree.nix
     ./plug/ui/rainbow-delimiters.nix
     ./plug/ui/vim-tmux-navigator.nix
+    ./plug/ui/web-devicons.nix
     ./plug/utils/comment.nix
     ./plug/utils/comment-box.nix
     ./plug/utils/copilot.nix
