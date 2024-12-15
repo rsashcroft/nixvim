@@ -4,13 +4,14 @@
       enable = true;
     };
     lsp = {
+      inlayHints = true;
       enable = true;
       servers = {
-        # rust_analyzer = {
-        #   enable = true;
-        #   installCargo = true;
-        #   installRustc = true;
-        # };
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
         eslint = {
           enable = true;
         };
