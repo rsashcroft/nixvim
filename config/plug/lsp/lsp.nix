@@ -6,7 +6,7 @@
     lsp = {
       enable = true;
       servers = {
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
@@ -17,10 +17,10 @@
         html = {
           enable = true;
         };
-        lua-ls = {
+        lua_ls = {
           enable = true;
         };
-        nil-ls = {
+        nil_ls = {
           enable = true;
         };
         marksman = {
@@ -35,7 +35,7 @@
         terraformls = {
           enable = true;
         };
-        tsserver = {
+        ts-ls = {
           enable = false;
         };
         yamlls = {
