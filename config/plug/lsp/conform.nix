@@ -44,6 +44,7 @@
           ];
           python = [ "black" ];
           lua = [ "stylua" ];
+          rust = [ "rustfmt" ];
           nix = [ "nixfmt" ];
           markdown = [
             [
