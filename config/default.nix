@@ -6,6 +6,8 @@
     ./sets.nix
     ./highlight.nix
 
+    ./plug/lang/rustaceanvim.nix
+
     ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
 
