@@ -43,92 +43,77 @@ in
       };
       sections = {
         lualine_a = [
-          {
-            name = "mode";
-            fmt = "string.lower";
-            color = {
-              fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
-              bg = "nil";
-            };
-            separator.left = "";
-            separator.right = "";
-          }
+          "mode"
         ];
         lualine_b = [
-          {
-            name = "branch";
-            icon = "";
-            color = {
-              fg = if config.colorschemes.base16.enable then colors.base04 else "nil";
-              bg = "nil";
-            };
-            separator.left = "";
-            separator.right = "";
-          }
-          {
-            name = "diff";
-            separator.left = "";
-            separator.right = "";
-          }
+          "branch"
         ];
         lualine_c = [
+          "filename"
+          "diff"
+        ];
+        lualine_x = [
+          "diagnostics"
           {
-            name = "diagnostic";
-            extraConfig = {
-              symbols = {
-                error = " ";
-                warn = " ";
-                info = " ";
-                hint = "󰝶 ";
-              };
+            __unkeyed-1 = {
+              __raw = ''
+                function()
+                    local msg = ""
+                    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+                    local clients = vim.lsp.get_active_clients()
+                    if next(clients) == nil then
+                        return msg
+                    end
+                    for _, client in ipairs(clients) do
+                        local filetypes = client.config.filetypes
+                        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+                            return client.name
+                        end
+                    end
+                    return msg
+                end
+              '';
             };
             color = {
-              fg = if config.colorschemes.base16.enable then colors.base08 else "nil";
-              bg = "nil";
+              fg = "#ffffff";
             };
-            separator.left = "";
-            separator.right = "";
+            icon = "";
           }
+          "encoding"
+          "fileformat"
+          "filetype"
         ];
-        lualine_x = [ "" ];
         lualine_y = [
           {
-            name = "filetype";
-            extraConfig = {
-              icon_only = true;
+            __unkeyed-1 = "aerial";
+            colored = true;
+            cond = {
+              __raw = ''
+                function()
+                  local buf_size_limit = 1024 * 1024
+                  if vim.api.nvim_buf_get_offset(0, vim.api.nvim_buf_line_count(0)) > buf_size_limit then
+                    return false
+                  end
+            
+                  return true
+                end
+              '';
             };
-            separator.left = "";
-            separator.right = "";
-          }
-          {
-            name = "filename";
-            extraConfig = {
-              symbols = {
-                modified = "";
-                readonly = "👁️";
-                unnamed = "";
-              };
+            dense = false;
+            dense_sep = ".";
+            depth = {
+              __raw = "nil";
             };
-            color = {
-              fg = if config.colorschemes.base16.enable then colors.base05 else "nil";
-              bg = "nil";
-            };
-            separator.left = "";
-            separator.right = "";
+            sep = " ) ";
           }
         ];
         lualine_z = [
           {
-            name = "location";
-            color = {
-              fg = if config.colorschemes.base16.enable then colors.base0B else "nil";
-              bg = "nil";
-            };
-            separator.left = "";
-            separator.right = "";
+            __unkeyed-1 = "location";
           }
         ];
       };
+
     };
   };
 }
