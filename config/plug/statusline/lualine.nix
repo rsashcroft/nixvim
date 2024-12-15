@@ -8,6 +8,10 @@ in
     settings = {
       options = {
         globalstatus = true;
+        section_separators = {
+          left = "";
+          right = "";
+        };
         disabled_filetypes = {
           statusline = [
             "dashboard"
