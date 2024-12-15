@@ -35,7 +35,7 @@
         terraformls = {
           enable = true;
         };
-        ts-ls = {
+        ts_ls = {
           enable = false;
         };
         yamlls = {
