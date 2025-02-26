@@ -8,7 +8,7 @@
         owner = "pasky";
         repo = "claude.vim";
         rev = "dd7b332c1ecd700abb31d651e4ffbce56c90338f";
-        hash = "04vvscrbdjskc3rkz1n6yqal8az34cbzlinx90iwlzzqwxwqwr7j";
+        hash = "sha256-8mSOeef4f8ojSN1G+hcj4ytEFfbGhj/zYFPLtjLTexM=";
       };
     })
   ];
