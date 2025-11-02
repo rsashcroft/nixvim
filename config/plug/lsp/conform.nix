@@ -61,9 +61,6 @@
           timeout_ms = 500;
           lsp_format = "fallback";
         };
-        # format_after_save = {
-        #   lsp_format = "fallback";
-        # };
         log_level = "warn";
         notify_on_error = false;
         notify_no_formatters = false;
